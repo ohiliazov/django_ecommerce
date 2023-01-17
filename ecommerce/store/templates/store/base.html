@@ -68,9 +68,13 @@
       </li>
       &nbsp; &nbsp; &nbsp;
       <li class="nav-item">
-        <a type="button" role="button" href="/"
+        <a type="button" role="button" href="{% url "cart-summary" %}"
            class="btn btn-outline-secondary">
           <i class="fa fa-shopping-cart" aria-hidden="true"> </i>
+          &nbsp;
+          <div id="cart-qty" class="d-inline-flex">
+            {{ cart|length }}
+          </div>
         </a>
       </li>
       &nbsp; &nbsp; &nbsp;

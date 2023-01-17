@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "store",
     "cart",
+    "mathfilters",
 ]
 
 MIDDLEWARE = [
@@ -62,7 +63,8 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
-                "store.views.categories",  # Updated
+                "store.context_processors.categories",  # Updated
+                "cart.context_processors.cart",  # Updated
             ],
         },
     },

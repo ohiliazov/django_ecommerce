@@ -8,6 +8,7 @@ authors = ["Oleksandr Hiliazov <oleksandr.hiliazov@eleks.com>"]
 python = "^3.9"
 Django = "^4.1.4"
 Pillow = "^9.3.0"
+django-mathfilters = "^1.0.0"
 
 [tool.poetry.dev-dependencies]
 pre-commit = "^2.21.0"
