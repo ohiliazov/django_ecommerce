@@ -1,0 +1,30 @@
+{% include "store/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+  <style>
+    body {
+      background-color: gray;
+    }
+  </style>
+  <body>
+  <div class="container bg-white shadow-md p-5 form-layout">
+    <h3>Delete your account</h3>
+    <hr>
+    <p>Are you sure?</p>
+    <form method="post" autocomplete="off">
+      {% csrf_token %}
+      <button
+          type="submit"
+          class="btn btn-danger navbar-btn text-white"
+      >&nbsp; Delete account
+      </button>
+      <br><br>
+      <a
+          class="btn btn-primary navbar-btn text-white"
+          type="button"
+          href="{% url "profile-management" %}">
+        <i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp; Go back </a>
+    </form>
+  </div>
+  </body>
+{% endblock %}
